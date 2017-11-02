@@ -1,5 +1,5 @@
 class Api::AppointmentsController < ApplicationController
-  before_action :set_appointment, only: [:show, :destroy]
+  before_action :set_appointment, only: [:destroy]
 
   def create
     appointment = Appointment.new(appointment_params)
@@ -10,17 +10,14 @@ class Api::AppointmentsController < ApplicationController
     end
   end
 
-  def show
-    render json: @appointment
+  def find_by_date
+    appointment = Appointment.where(date: params[:date])
+    render json: appointment
   end
 
   def destroy
-    if @appointment.destroy
-      render status: 204
-    else
-      render json: { message: 'Unable to delete appointment'},
-      status: 400
-    end
+    @appointment.destroy
+    render body: nil, status: :no_content
   end
 
   private
