@@ -1,24 +1,34 @@
-# README
+# React Simple Calendar
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple calendar app that allows you to create and delete appointments. The server is powered by Ruby on Rails and uses custom API endpoints. The front-end utilizes React components and Redux for state management.
 
-Things you may want to cover:
+For the client, visit [ReactCalendarClient](https://github.com/zeniavilla/react-calendar-client).
 
-* Ruby version
+## Installation
 
-* System dependencies
+Fork and clone this repo. Type the lines below into your terminal.
 
-* Configuration
+    $ bundle install
 
-* Database creation
+    $ rails db:create
 
-* Database initialization
+    $ rails db:migrate
 
-* How to run the test suite
+If you'd like to populate the database, run the following line.
 
-* Services (job queues, cache servers, search engines, etc.)
+    $ rails db:seed
 
-* Deployment instructions
+## Usage
 
-* ...
+Type the line below into your terminal. Visit localhost:3001 in your browser.
+
+    $ rails s -p 3001
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/zeniavilla/react-calendar-api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
